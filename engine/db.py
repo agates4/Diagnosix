@@ -5,6 +5,9 @@ from datetime import datetime, timedelta
 import math
 import uuid
 import hashlib
+import json
+from find_words import get_data
+import random
 
 class SQLConnection:
     """Used to connect to a SQL database and send queries to it"""
@@ -50,7 +53,7 @@ class SQLConnection:
             """
             #  TODO check sql_query and values to see if they are lists
             #  if sql_query is a string
-            if isinstance(sql_query, basestring):
+            if isinstance(sql_query, basestring):   
                 self.cur.execute(sql_query, values)
                 self.con.commit()
             #  otherwise sql_query should be a list of strings
@@ -63,3 +66,22 @@ class SQLConnection:
             return self.cur.fetchall()
     def close(self):
         self.cur.close()
+
+    def get_data(self):
+        return json.dumps(self.query("SELECT * FROM appointments"))
+
+    def send_data(self,conversation):
+        data=get_data().send_json(conversation)
+        
+        print type(data)
+        junk= json.loads(data)
+        print junk["ID"] 
+
+        #fuck=int(json.loads(data))
+        #print fuck
+        #print data["ID"]
+        random_num=random.randrange(106, 500000)
+        self.query("INSERT INTO appointments VALUES (%s,%s,%s,%s,%s);",(random_num,junk["ID"],junk["Name"],junk["Date"],"700 Huron Rd E, Cleveland"))
+
+
+#SQLConnection().send_data("abortion is bad")
