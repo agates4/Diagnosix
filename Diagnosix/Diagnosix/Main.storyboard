@@ -317,29 +317,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xtg-vQ-Xcc">
-                                <frame key="frameInset" minY="-2" width="375" height="76"/>
+                                <frame key="frameInset" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.86371748100000001" green="0.30785182620000001" blue="0.25115991970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.9865691065788269" green="0.34406468272209167" blue="0.27873992919921875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43R-rA-qXD" userLabel="Name">
-                                <frame key="frameInset" minX="16" minY="10" width="343" height="35"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stethoscope.png" translatesAutoresizingMaskIntoConstraints="NO" id="c5H-xl-4LI">
+                                <frame key="frameInset" minX="146" minY="16" width="17" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7I-qy-QWJ">
+                                <frame key="frameInset" minX="166" minY="13" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="PlainDoc">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="15" name="ArialUnicodeMS"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uO-GQ-Mdz" userLabel="ProfName">
-                                <frame key="frameInset" minX="19" minY="36" width="337" height="21"/>
+                                <frame key="frameInset" minX="97" minY="108" width="269" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xa3-nH-hMA" userLabel="Description">
-                                <frame key="frameInset" minX="11" minY="135" width="343" height="437"/>
+                                <frame key="frameInset" minX="112" minY="171" width="241" height="403"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2r-2M-SAY">
@@ -388,67 +399,103 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bacteria.png" translatesAutoresizingMaskIntoConstraints="NO" id="kq1-Kj-woF">
-                                <frame key="frameInset" minX="11" minY="5" width="63" height="63"/>
+                                <frame key="frameInset" minX="307" minY="523" width="63" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHG-6M-uuZ" userLabel="TLDR">
-                                <frame key="frameInset" minY="76" width="75" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHG-6M-uuZ" userLabel="TLDR">
+                                <frame key="frameInset" minX="4" minY="92" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="TLDR" label="TLDR"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Summary"/>
+                                <state key="normal" title="Summary" image="summary.png"/>
                                 <connections>
                                     <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="rGO-Kf-dsa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVR-rS-ltW" userLabel="Description">
-                                <frame key="frameInset" minX="150" minY="76" width="75" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Description" label="Description"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Description"/>
-                                <connections>
-                                    <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="bM8-71-1zp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-3Q-yT2" userLabel="Treatment">
-                                <frame key="frameInset" minX="225" minY="76" width="75" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="Treatment" label="Treatment"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Treatment"/>
-                                <connections>
-                                    <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="6Fe-NW-RvJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4k-Sl-cKX" userLabel="MedicalConditions">
-                                <frame key="frameInset" minX="300" minY="76" width="75" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="MedicalConditions" label="MedicalConditions"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Conditions"/>
-                                <connections>
-                                    <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="J33-Ld-nJS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-xa-scf" userLabel="Symptoms">
-                                <frame key="frameInset" minX="75" minY="76" width="75" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-xa-scf" userLabel="Symptoms">
+                                <frame key="frameInset" minX="4" minY="190" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="Symptoms" label="Symptoms"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="Symptoms"/>
+                                <state key="normal" title="Symptoms" image="symptoms.png"/>
                                 <connections>
                                     <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="kn1-wL-iVQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVR-rS-ltW" userLabel="Description">
+                                <frame key="frameInset" minX="4" minY="288" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Description" label="Description"/>
+                                <state key="normal" title="Description" image="description.png"/>
+                                <connections>
+                                    <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="bM8-71-1zp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-3Q-yT2" userLabel="Treatment">
+                                <frame key="frameInset" minX="4" minY="386" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Treatment" label="Treatment"/>
+                                <state key="normal" title="Treatment" image="treatment.png"/>
+                                <connections>
+                                    <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="6Fe-NW-RvJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4k-Sl-cKX" userLabel="MedicalConditions">
+                                <frame key="frameInset" minX="4" minY="484" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="MedicalConditions" label="MedicalConditions"/>
+                                <state key="normal" title="Conditions" image="conditions.png"/>
+                                <connections>
+                                    <action selector="changeTabWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="J33-Ld-nJS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Summary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSZ-hB-LUG">
+                                <frame key="frameInset" minX="161" minY="138" width="143" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4w-gp-7RA">
+                                <frame key="frameInset" minX="140" minY="553" width="94" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="graphButton.png"/>
+                                <connections>
+                                    <action selector="goToStatsWithSender:" destination="Vrv-xj-H4y" eventType="touchUpInside" id="3qD-cO-TOQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graph.png" translatesAutoresizingMaskIntoConstraints="NO" id="zbY-mB-uYg">
+                                <frame key="frameInset" minX="64" minY="152" width="247" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ERx-fL-qw0">
+                                <frame key="frameInset" minX="26" minY="305" width="323" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43R-rA-qXD" userLabel="Name">
+                                <frame key="frameInset" minX="33" minY="74" width="398" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bug" destination="kq1-Kj-woF" id="Gih-ne-tvK"/>
+                        <outlet property="button0" destination="kHG-6M-uuZ" id="uTK-5i-Y6o"/>
+                        <outlet property="button1" destination="8gB-xa-scf" id="WMG-9y-fyb"/>
+                        <outlet property="button2" destination="QVR-rS-ltW" id="D97-Cn-rSW"/>
+                        <outlet property="button3" destination="JRy-3Q-yT2" id="QCe-yb-N26"/>
+                        <outlet property="button4" destination="X4k-Sl-cKX" id="2wN-cj-aIv"/>
                         <outlet property="descriptionBox" destination="xa3-nH-hMA" id="g9Q-PV-2gg"/>
+                        <outlet property="graphImage" destination="zbY-mB-uYg" id="JaV-2R-TOZ"/>
                         <outlet property="nameName" destination="43R-rA-qXD" id="htr-RO-Iqo"/>
                         <outlet property="profName" destination="7uO-GQ-Mdz" id="bQc-4E-5md"/>
+                        <outlet property="statisticsButton" destination="t4w-gp-7RA" id="hAq-MW-oUm"/>
+                        <outlet property="titleLabel" destination="oSZ-hB-LUG" id="0Sr-2W-4a4"/>
                         <outlet property="view" destination="3VM-6G-rZk" id="4aq-tc-fmr"/>
+                        <outlet property="youtube1" destination="ERx-fL-qw0" id="eHc-44-QE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVb-uC-vsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -460,9 +507,17 @@
         <image name="Microphone.png" width="43" height="43"/>
         <image name="Treatment Plan.png" width="64" height="64"/>
         <image name="bacteria.png" width="256" height="256"/>
+        <image name="conditions.png" width="1067" height="1067"/>
+        <image name="description.png" width="1067" height="1067"/>
+        <image name="graph.png" width="426" height="195"/>
+        <image name="graphButton.png" width="1067" height="1067"/>
         <image name="home.png" width="338" height="338"/>
         <image name="list.png" width="338" height="338"/>
         <image name="notR_copy.png" width="507" height="509"/>
+        <image name="stethoscope.png" width="338" height="338"/>
+        <image name="summary.png" width="1067" height="1067"/>
+        <image name="symptoms.png" width="1067" height="1067"/>
+        <image name="treatment.png" width="1067" height="1067"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8TN-yV-9eA"/>

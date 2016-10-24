@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Diagnosix/ListDiagnosisController.swift"
-            timestampString = "498897289.089625"
+            timestampString = "498910926.579653"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "ListDiagnosisController"
             landmarkType = "3">
          </BreakpointContent>

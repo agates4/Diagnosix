@@ -53,10 +53,7 @@ class ListDiagnosisController: UIViewController {
         let label = UILabel(frame: rect)
         label.font.withSize(12)
         var dateStr : String = (dict["Date"] as? String)!
-        if(dateStr.characters.last == ":")
-        {
-            dateStr.remove(at: dateStr.index(before: dateStr.endIndex))
-        }
+
         label.text = dateStr
         label.tag = indexPath.row
         cell.contentView.addSubview(label)

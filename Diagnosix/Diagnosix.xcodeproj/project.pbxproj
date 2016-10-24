@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A903C7E1DBCDF91000F5135 /* bookbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A903C7D1DBCDF91000F5135 /* bookbutton.png */; };
+		0A903C801DBCE201000F5135 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A903C7F1DBCE201000F5135 /* graph.png */; };
 		0A9918BF1DBB22FA00D6D59B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9918BE1DBB22FA00D6D59B /* AppDelegate.swift */; };
 		0A9918C11DBB22FA00D6D59B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9918C01DBB22FA00D6D59B /* ViewController.swift */; };
 		0A9918C61DBB22FA00D6D59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9918C51DBB22FA00D6D59B /* Assets.xcassets */; };
@@ -22,6 +24,14 @@
 		0AB3D25E1DBC83E9005C4285 /* FadeIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB3D25D1DBC83E9005C4285 /* FadeIn.swift */; };
 		0AB3D2601DBC88F3005C4285 /* Treatment Plan.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D25F1DBC88F3005C4285 /* Treatment Plan.png */; };
 		0AB3D2621DBC9508005C4285 /* bacteria.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2611DBC9508005C4285 /* bacteria.png */; };
+		0AB3D2681DBCCD54005C4285 /* conditions.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2631DBCCD54005C4285 /* conditions.png */; };
+		0AB3D2691DBCCD54005C4285 /* description.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2641DBCCD54005C4285 /* description.png */; };
+		0AB3D26A1DBCCD54005C4285 /* summary.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2651DBCCD54005C4285 /* summary.png */; };
+		0AB3D26B1DBCCD54005C4285 /* symptoms.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2661DBCCD54005C4285 /* symptoms.png */; };
+		0AB3D26C1DBCCD54005C4285 /* treatment.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2671DBCCD54005C4285 /* treatment.png */; };
+		0AB3D26E1DBCD0A9005C4285 /* stethoscope.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D26D1DBCD0A9005C4285 /* stethoscope.png */; };
+		0AB3D2701DBCDBDE005C4285 /* graphButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D26F1DBCDBDE005C4285 /* graphButton.png */; };
+		0AB3D2721DBCDC87005C4285 /* virus.png in Resources */ = {isa = PBXBuildFile; fileRef = 0AB3D2711DBCDC87005C4285 /* virus.png */; };
 		0AE8771D1DBBE837000FEA66 /* SlideFromBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE877191DBBE837000FEA66 /* SlideFromBottom.swift */; };
 		0AE8771E1DBBE837000FEA66 /* SlideFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8771A1DBBE837000FEA66 /* SlideFromLeft.swift */; };
 		0AE8771F1DBBE837000FEA66 /* SlideFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE8771B1DBBE837000FEA66 /* SlideFromRight.swift */; };
@@ -52,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A903C7D1DBCDF91000F5135 /* bookbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookbutton.png; sourceTree = "<group>"; };
+		0A903C7F1DBCE201000F5135 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
 		0A9918BB1DBB22FA00D6D59B /* Diagnosix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diagnosix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A9918BE1DBB22FA00D6D59B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A9918C01DBB22FA00D6D59B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +85,14 @@
 		0AB3D25D1DBC83E9005C4285 /* FadeIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeIn.swift; sourceTree = "<group>"; };
 		0AB3D25F1DBC88F3005C4285 /* Treatment Plan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Treatment Plan.png"; sourceTree = "<group>"; };
 		0AB3D2611DBC9508005C4285 /* bacteria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bacteria.png; sourceTree = "<group>"; };
+		0AB3D2631DBCCD54005C4285 /* conditions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conditions.png; sourceTree = "<group>"; };
+		0AB3D2641DBCCD54005C4285 /* description.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = description.png; sourceTree = "<group>"; };
+		0AB3D2651DBCCD54005C4285 /* summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summary.png; sourceTree = "<group>"; };
+		0AB3D2661DBCCD54005C4285 /* symptoms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = symptoms.png; sourceTree = "<group>"; };
+		0AB3D2671DBCCD54005C4285 /* treatment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treatment.png; sourceTree = "<group>"; };
+		0AB3D26D1DBCD0A9005C4285 /* stethoscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stethoscope.png; sourceTree = "<group>"; };
+		0AB3D26F1DBCDBDE005C4285 /* graphButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graphButton.png; sourceTree = "<group>"; };
+		0AB3D2711DBCDC87005C4285 /* virus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = virus.png; sourceTree = "<group>"; };
 		0AE877191DBBE837000FEA66 /* SlideFromBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromBottom.swift; path = "Custom Segues/SlideFromBottom.swift"; sourceTree = "<group>"; };
 		0AE8771A1DBBE837000FEA66 /* SlideFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromLeft.swift; path = "Custom Segues/SlideFromLeft.swift"; sourceTree = "<group>"; };
 		0AE8771B1DBBE837000FEA66 /* SlideFromRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideFromRight.swift; path = "Custom Segues/SlideFromRight.swift"; sourceTree = "<group>"; };
@@ -191,6 +211,16 @@
 		0A9918F71DBBC86C00D6D59B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0AB3D2631DBCCD54005C4285 /* conditions.png */,
+				0AB3D2641DBCCD54005C4285 /* description.png */,
+				0A903C7D1DBCDF91000F5135 /* bookbutton.png */,
+				0AB3D2651DBCCD54005C4285 /* summary.png */,
+				0AB3D2661DBCCD54005C4285 /* symptoms.png */,
+				0AB3D26F1DBCDBDE005C4285 /* graphButton.png */,
+				0AB3D26D1DBCD0A9005C4285 /* stethoscope.png */,
+				0AB3D2671DBCCD54005C4285 /* treatment.png */,
+				0AB3D2711DBCDC87005C4285 /* virus.png */,
+				0A903C7F1DBCE201000F5135 /* graph.png */,
 				0AB3D2611DBC9508005C4285 /* bacteria.png */,
 				0AB3D2591DBC5D22005C4285 /* home.png */,
 				0AB3D25F1DBC88F3005C4285 /* Treatment Plan.png */,
@@ -346,15 +376,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB3D2681DBCCD54005C4285 /* conditions.png in Resources */,
 				0A9918C91DBB22FA00D6D59B /* LaunchScreen.storyboard in Resources */,
+				0AB3D2701DBCDBDE005C4285 /* graphButton.png in Resources */,
 				0AE877241DBBE9B3000FEA66 /* yesR_copy.png in Resources */,
+				0AB3D26E1DBCD0A9005C4285 /* stethoscope.png in Resources */,
 				0AB3D2621DBC9508005C4285 /* bacteria.png in Resources */,
 				0AB3D25B1DBC5D22005C4285 /* home.png in Resources */,
+				0AB3D26B1DBCCD54005C4285 /* symptoms.png in Resources */,
 				0A9918F01DBB967400D6D59B /* Main.storyboard in Resources */,
 				0AB3D2601DBC88F3005C4285 /* Treatment Plan.png in Resources */,
+				0AB3D26C1DBCCD54005C4285 /* treatment.png in Resources */,
+				0A903C7E1DBCDF91000F5135 /* bookbutton.png in Resources */,
 				0AB3D2581DBC3DC4005C4285 /* Microphone.png in Resources */,
+				0AB3D26A1DBCCD54005C4285 /* summary.png in Resources */,
+				0A903C801DBCE201000F5135 /* graph.png in Resources */,
+				0AB3D2721DBCDC87005C4285 /* virus.png in Resources */,
 				0A9918C61DBB22FA00D6D59B /* Assets.xcassets in Resources */,
 				0AE877231DBBE9B3000FEA66 /* notR_copy.png in Resources */,
+				0AB3D2691DBCCD54005C4285 /* description.png in Resources */,
 				0AB3D25C1DBC5D22005C4285 /* list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
