@@ -25,7 +25,7 @@ class ListDiagnosisController: UIViewController {
         //header.backgroundColor = mainColor
         self.view.backgroundColor = secondaryColor
         
-        Alamofire.request("http://fa29080d.ngrok.io/speech_get", method: .get).responseJSON { (responseData) -> Void in
+        Alamofire.request("https://f5036f6d.ngrok.io/speech_get", method: .get).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 print(swiftyJsonVar)
@@ -52,8 +52,8 @@ class ListDiagnosisController: UIViewController {
         let rect = CGRect(origin: CGPoint(x: 200,y :12), size: CGSize(width: 160, height: 14))
         let label = UILabel(frame: rect)
         label.font.withSize(12)
-        var dateStr : String = (dict["Date"] as? String)!
-
+        let dateStr : String = (dict["Date"] as? String)!
+        
         label.text = dateStr
         label.tag = indexPath.row
         cell.contentView.addSubview(label)
@@ -70,19 +70,23 @@ class ListDiagnosisController: UIViewController {
     }
     
     @IBAction func tappedCell(_ sender: UITapGestureRecognizer) {
-
-        let location = sender.location(in: self.tblJSON)
-        let indexPath = self.tblJSON.indexPathForRow(at: location)
-        let cell = self.tblJSON.cellForRow(at: indexPath!)
-        let ID : Int = Int((cell?.detailTextLabel?.text)!)!
-        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! DiagnosisController
-        let modalStyle: UIModalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        controller.modalTransitionStyle = modalStyle
-        controller.sickID = ID
-        self.present(controller, animated: true, completion: nil)
         
+        let location = sender.location(in: self.tblJSON)
+        if let indexPath = self.tblJSON.indexPathForRow(at: location)
+        {
+            if let cell = self.tblJSON.cellForRow(at: indexPath)
+            {
+                if(cell.detailTextLabel?.text != nil)
+                {
+                    let ID : Int = Int((cell.detailTextLabel?.text)!)!
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! DiagnosisController
+                    let modalStyle: UIModalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                    controller.modalTransitionStyle = modalStyle
+                    controller.sickID = ID
+                    self.present(controller, animated: true, completion: nil)
+                }
+            }
+        }
     }
-
-    
 }
 
