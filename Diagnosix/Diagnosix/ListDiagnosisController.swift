@@ -28,7 +28,6 @@ class ListDiagnosisController: UIViewController {
         Alamofire.request("https://f5036f6d.ngrok.io/speech_get", method: .get).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
-                print(swiftyJsonVar)
                 if let resData = swiftyJsonVar.arrayObject {
                     self.arrRes = resData as! [[String:AnyObject]]
                 }

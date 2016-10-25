@@ -16,7 +16,7 @@ class DiagnosisController: UIViewController {
     var sickID : Int!
     var swiftyJsonVar : JSON!
     @IBOutlet weak var titleLabel: UILabel!
-    let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImtAbWdhdGVzLm1lIiwicm9sZSI6IlVzZXIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zaWQiOiI4MTkiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ZlcnNpb24iOiIyMDAiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xpbWl0IjoiOTk5OTk5OTk5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwIjoiUHJlbWl1bSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGFuZ3VhZ2UiOiJlbi1nYiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvZXhwaXJhdGlvbiI6IjIwOTktMTItMzEiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXBzdGFydCI6IjIwMTYtMTAtMjIiLCJpc3MiOiJodHRwczovL3NhbmRib3gtYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTQ3NzIzODUxNCwibmJmIjoxNDc3MjMxMzE0fQ.K1yxmdwbhoQRvSd4evoe2eVa-ubHstQLBthkcVPQ96U"
+    var token = "token"
     
     @IBOutlet weak var nameName: UILabel!
     @IBOutlet weak var profName: UILabel!
@@ -24,20 +24,24 @@ class DiagnosisController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        graphImage.isHidden = true
-        youtube1.isHidden = true
-        Alamofire.request("https://sandbox-healthservice.priaid.ch/issues/\(sickID!.description)/info?token=\(token)&language=en-gb&format=json").responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                self.swiftyJsonVar = JSON(responseData.result.value!)
-                self.nameName.text = self.swiftyJsonVar["Name"].description
-                self.profName.text = self.swiftyJsonVar["ProfName"].description
-                print(self.nameName.text)
-                print(self.profName.text)
-                self.descriptionBox.text = self.swiftyJsonVar["DescriptionShort"].description
-                //self.descriptionBox.text = self.swiftyJsonVar["PossibleSymptoms"].description
-                //self.descriptionBox.text = self.swiftyJsonVar["Description"].description
-                //self.descriptionBox.text = self.swiftyJsonVar["TreatmentDescription"].description
-                //self.descriptionBox.text = self.swiftyJsonVar["MedicalCondition"].description
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer agates10@kent.edu:4Gy54wodlr8+r0HksBaxmg==",
+        ]
+        Alamofire.request("https://sandbox-authservice.priaid.ch/login", method: .post, headers: headers).responseJSON {
+            response in
+            if(response.result.value != nil)
+            {
+                let tokenResult = JSON(response.result.value!)
+                self.token =  tokenResult["Token"].description
+                Alamofire.request("https://sandbox-healthservice.priaid.ch/issues/\(self.sickID!.description)/info?token=\(self.token)&language=en-gb&format=json").responseJSON { (responseData) -> Void in
+                    if((responseData.result.value) != nil) {
+                        self.swiftyJsonVar = JSON(responseData.result.value!)
+                        self.titleLabel.text = "Summary"
+                        self.nameName.text = self.swiftyJsonVar["Name"].description
+                        self.profName.text = self.swiftyJsonVar["ProfName"].description
+                        self.descriptionBox.text = self.swiftyJsonVar["DescriptionShort"].description
+                    }
+                }
             }
         }
     }

@@ -254,7 +254,7 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate {
                 "speech": diagnosisString
             ]
             var swiftyJsonVar : JSON!
-            Alamofire.request("http://fa29080d.ngrok.io/speech", method: .post, parameters: parameters, encoding: JSONEncoding(options: [])).responseJSON { (responseData) -> Void in
+            Alamofire.request("http://f5036f6d.ngrok.io/speech", method: .post, parameters: parameters, encoding: JSONEncoding(options: [])).responseJSON { (responseData) -> Void in
                 var intID : Int = 0
                 if((responseData.result.value) != nil) {
                     swiftyJsonVar = JSON(responseData.result.value!)

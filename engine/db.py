@@ -8,6 +8,10 @@ import hashlib
 import json
 from find_words import get_data
 import random
+import requests
+import hmac
+import hashlib
+import base64
 
 class SQLConnection:
     """Used to connect to a SQL database and send queries to it"""
@@ -66,7 +70,7 @@ class SQLConnection:
             return self.cur.fetchall()
     def close(self):
         self.cur.close()
-
+    
     def get_data(self):
         return json.dumps(self.query("SELECT * FROM appointments"))
 
