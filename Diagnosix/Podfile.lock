@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.0.1)
+  - SwiftSiriWaveformView (2.0.0)
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - SwiftSiriWaveformView
+  - SwiftyJSON (~> 3.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  SwiftSiriWaveformView: 85328da51cf5f3c6a0dbcdf9186f4417edf1b538
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: 8c27465dc48a7e9789904f80329dd12ac479f8eb
+
+COCOAPODS: 1.1.1

@@ -10,6 +10,10 @@ import hashlib
 import json
 from find_words import get_data
 import random
+import requests
+import hmac
+import hashlib
+import base64
 
 class SQLConnection:
     """Used to connect to a SQL database and send queries to it"""
@@ -68,7 +72,7 @@ class SQLConnection:
             return self.cur.fetchall()
     def close(self):
         self.cur.close()
-
+    
     def get_data(self):
         return json.dumps(self.query("SELECT * FROM appointments"))
     def send_data(self,conversation):
@@ -85,8 +89,12 @@ class SQLConnection:
         youtube=workaround.aron(junk["Name"])
       
 
+<<<<<<< HEAD
         #youtube=getContent().get_videos(junk["Name"])
         random_num=random.randrange(106, 500000)
         self.query("INSERT INTO appointments VALUES (%s,%s,%s,%s,%s,%s);",(random_num,junk["ID"],junk["Name"],junk["Date"],"700 Huron Rd E, Cleveland",youtube))
         return youtube
+=======
+
+>>>>>>> 820cce32adc7aca9c95662d3d357ec0c4892acc2
 #SQLConnection().send_data("abortion is bad")
