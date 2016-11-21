@@ -89,12 +89,9 @@ class SQLConnection:
         youtube=workaround.aron(junk["Name"])
       
 
-<<<<<<< HEAD
         #youtube=getContent().get_videos(junk["Name"])
         random_num=random.randrange(106, 500000)
         self.query("INSERT INTO appointments VALUES (%s,%s,%s,%s,%s,%s);",(random_num,junk["ID"],junk["Name"],junk["Date"],"700 Huron Rd E, Cleveland",youtube))
         return youtube
-=======
 
->>>>>>> 820cce32adc7aca9c95662d3d357ec0c4892acc2
 #SQLConnection().send_data("abortion is bad")

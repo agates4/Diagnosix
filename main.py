@@ -31,11 +31,11 @@ def interpret_string():
 		return str(other["ID"])
 	else:
 		return text
-<<<<<<< HEAD
 	
 @app.route('/speech_get',methods=['GET', 'POST'])#call to get data from db
-=======
-
+def junk():
+	return SQLConnection().get_data()
+	
 @app.route('/token',methods=['GET', 'POST'])
 def send_token():
     key = "Authorization"
@@ -46,17 +46,10 @@ def send_token():
     r = requests.post(url, headers=headers)
     return r.text
 
-@app.route('/speech_get',methods=['GET', 'POST'])
->>>>>>> 820cce32adc7aca9c95662d3d357ec0c4892acc2
-def junk():
-	return SQLConnection().get_data()
-	
+
 if __name__ == "__main__":
     app.run(debug=True)
-<<<<<<< HEAD
 
 
 
 
-=======
->>>>>>> 820cce32adc7aca9c95662d3d357ec0c4892acc2
