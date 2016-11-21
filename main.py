@@ -11,24 +11,32 @@ app = Flask(__name__)
 def show_page():
 	return "hei"
 
-@app.route('/speech',methods=['GET', 'POST'])
+@app.route('/speech',methods=['GET', 'POST'])#processes text
 def interpret_string():
 	data=request.get_json(force=True)
 	text=data["speech"].lower()
-	SQLConnection().send_data(text)
+	tempy=SQLConnection().send_data(text)
 	the_data=get_data().send_json(text)
 	print data
 	
 	print "#######################"
 	if the_data!=False:
 		other=json.loads(the_data)
+		other["YT"]=tempy
+		the_data=json.dumps(other)
+                return (the_data)
+                return str(other)
 		return str(other["ID"])
 	else:
 		return text
 	
-@app.route('/speech_get',methods=['GET', 'POST'])
+@app.route('/speech_get',methods=['GET', 'POST'])#call to get data from db
 def junk():
 	return SQLConnection().get_data()
 	
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+

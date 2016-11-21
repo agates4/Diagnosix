@@ -1,3 +1,5 @@
+from yt import yt
+from find_videos import getContent
 import sys, ConfigParser
 import MySQLdb as mdb
 from plaid.utils import json
@@ -69,7 +71,6 @@ class SQLConnection:
 
     def get_data(self):
         return json.dumps(self.query("SELECT * FROM appointments"))
-
     def send_data(self,conversation):
         data=get_data().send_json(conversation)
         
@@ -80,8 +81,12 @@ class SQLConnection:
         #fuck=int(json.loads(data))
         #print fuck
         #print data["ID"]
+        workaround=yt()
+        youtube=workaround.aron(junk["Name"])
+      
+
+        #youtube=getContent().get_videos(junk["Name"])
         random_num=random.randrange(106, 500000)
-        self.query("INSERT INTO appointments VALUES (%s,%s,%s,%s,%s);",(random_num,junk["ID"],junk["Name"],junk["Date"],"700 Huron Rd E, Cleveland"))
-
-
+        self.query("INSERT INTO appointments VALUES (%s,%s,%s,%s,%s,%s);",(random_num,junk["ID"],junk["Name"],junk["Date"],"700 Huron Rd E, Cleveland",youtube))
+        return youtube
 #SQLConnection().send_data("abortion is bad")
