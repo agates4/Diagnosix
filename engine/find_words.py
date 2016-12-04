@@ -46,7 +46,7 @@ class get_data():
 				new_trip["Name"]=single_disease
 				#new_trip["YT"]=yt().aron("string")
 #				new_trip["YT"]=yt().aron(new_trip["Name"])
-				new_trip["Date"]=time.strftime("%m/%d/%Y %I:%M:")
+				new_trip["Date"]=time.strftime("%m/%d/%Y %I:%M %p")
 				#time.strftime("%d/%m/%Y"))
 				other.append(new_trip)
 				#print json.dumps(new_trip)

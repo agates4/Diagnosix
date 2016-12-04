@@ -9,11 +9,11 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/',methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def show_page():
 	return "hei"
 
-@app.route('/speech',methods=['GET', 'POST'])#processes text
+@app.route('/speech', methods=['GET', 'POST'])#processes text
 def interpret_string():
 	data=request.get_json(force=True)
 	text=data["speech"].lower()
@@ -32,11 +32,11 @@ def interpret_string():
 	else:
 		return text
 	
-@app.route('/speech_get',methods=['GET', 'POST'])#call to get data from db
+@app.route('/speech_get', methods=['GET', 'POST'])#call to get data from db
 def junk():
 	return SQLConnection().get_data()
 	
-@app.route('/token',methods=['GET', 'POST'])
+@app.route('/token', methods=['GET', 'POST'])
 def send_token():
     key = "Authorization"
     value = "Bearer agates10@kent.edu:4Gy54wodlr8+r0HksBaxmg=="
@@ -50,6 +50,11 @@ def send_token():
 if __name__ == "__main__":
     app.run(debug=True)
 
-
+app.config['SERVER_NAME'] = 'geczy.tech'
+app.run(
+    host=app.config['SERVER_NAME'],
+    port=5000,
+    debug=True,
+)
 
 

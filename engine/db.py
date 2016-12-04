@@ -74,7 +74,7 @@ class SQLConnection:
         self.cur.close()
     
     def get_data(self):
-        return json.dumps(self.query("SELECT * FROM appointments"))
+        return json.dumps(self.query("SELECT * FROM appointments ORDER BY date DESC"))
     def send_data(self,conversation):
         data=get_data().send_json(conversation)
         
